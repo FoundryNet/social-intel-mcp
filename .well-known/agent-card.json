@@ -1,0 +1,28 @@
+{
+  "name": "Social Trends Intelligence MCP",
+  "description": "Social trends intelligence for agents: trending topics with velocity, cross-platform sentiment, viral content, community pulse, and brand mentions across Reddit, Hacker News, and Google Trends. Part of the FoundryNet Data Network.",
+  "url": "https://github.com/FoundryNet/social-intel-mcp",
+  "capabilities": [
+    "social_trends", "trending_topics", "sentiment_analysis",
+    "viral_content", "community_pulse", "brand_monitoring"
+  ],
+  "network": "FoundryNet Data Network",
+  "see_also": {
+    "gov-contracts-mcp": "https://gov-contracts-mcp-production.up.railway.app/mcp",
+    "brand-intel-mcp": "https://brand-intel-mcp-production.up.railway.app/mcp",
+    "patent-intel-mcp": "https://patent-intel-mcp-production.up.railway.app/mcp",
+    "financial-signals-mcp": "https://financial-signals-mcp-production.up.railway.app/mcp",
+    "weather-intel-mcp": "https://weather-intel-mcp-production.up.railway.app/mcp",
+    "cyber-intel-mcp": "https://cyber-intel-mcp-production.up.railway.app/mcp",
+    "compliance-mcp": "https://compliance-mcp-production.up.railway.app/mcp",
+    "academic-intel-mcp": "https://academic-intel-mcp-production.up.railway.app/mcp",
+    "fact-check-mcp": "https://fact-check-mcp-production.up.railway.app/mcp",
+    "oss-intel-mcp": "https://oss-intel-mcp-production.up.railway.app/mcp"
+  },
+  "mint_protocol": "https://mint-mcp-production.up.railway.app/mcp",
+  "protocols": {
+    "mcp": { "endpoint": "https://social-intel-mcp-production.up.railway.app/mcp", "transport": "streamable-http", "tools_count": 6 },
+    "x402": { "supported": true, "currency": "USDC", "network": "solana" }
+  },
+  "contact": "hello@foundrynet.io"
+}

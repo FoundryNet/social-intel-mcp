@@ -1,0 +1,18 @@
+name: "@foundrynet/social-intel"
+displayName: "Social Trends Intelligence MCP"
+description: >-
+  Social trends intelligence for AI agents — trending topics with velocity scores,
+  cross-platform sentiment, fastest-rising viral content, community pulse, and brand
+  mentions across Reddit, Hacker News, and Google Trends. Part of the FoundryNet Data
+  Network. Free tier then x402 (USDC on Solana).
+startCommand:
+  type: http
+  url: "https://social-intel-mcp-production.up.railway.app/mcp"
+  transport: streamable-http
+  configSchema:
+    type: object
+    properties:
+      api_key:
+        type: string
+        title: "Forge billing key (optional)"
+        description: "fnet_ key to bypass the per-query x402 paywall and bill to a Forge account."

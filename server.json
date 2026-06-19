@@ -1,0 +1,9 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.FoundryNet/social-intel-mcp",
+  "title": "Social Trends Intelligence MCP",
+  "description": "Trending topics, cross-platform sentiment, viral content, community pulse & brand mentions.",
+  "version": "1.0.0",
+  "repository": { "url": "https://github.com/FoundryNet/social-intel-mcp", "source": "github" },
+  "remotes": [ { "type": "streamable-http", "url": "https://social-intel-mcp-production.up.railway.app/mcp" } ]
+}

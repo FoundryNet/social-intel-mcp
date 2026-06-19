@@ -1,0 +1,8 @@
+fastmcp>=2.0
+httpx>=0.27
+# Google Trends source. OPTIONAL at runtime: social_sources imports pytrends inside
+# a try/except so a missing package (or GOOGLE_TRENDS_ENABLED=false) just disables
+# the Google Trends source — `import server` still works without it installed.
+pytrends>=4.9
+# Reddit (public JSON) + Hacker News (Firebase) are pure HTTP via httpx. x402 gating
+# is plain Solana JSON-RPC over httpx — no x402[svm]/solders extra.
