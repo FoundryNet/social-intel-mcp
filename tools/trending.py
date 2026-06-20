@@ -12,7 +12,7 @@ def register(mcp) -> None:
         agent_id: Optional[str] = None,
         payment_tx: Optional[str] = None,
     ) -> dict:
-        """Top trending topics across social platforms with velocity scores — what's
+        """Track trending topics across social media with velocity scores — what's
         gaining attention right now on Reddit, Hacker News, and Google Trends.
 
         PAID: $0.01 USDC per query after a daily free allowance (25/day). On a 402,

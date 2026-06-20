@@ -11,9 +11,9 @@ def register(mcp) -> None:
         agent_id: Optional[str] = None,
         payment_tx: Optional[str] = None,
     ) -> dict:
-        """Sentiment for a topic across platforms — an overall score + per-platform
-        breakdown, the volume trend (rising/steady/new), and the key discussion
-        threads driving it. Sentiment is a deterministic lexicon heuristic (no LLM).
+        """Analyze cross-platform sentiment for a topic on Reddit and Hacker News —
+        an overall score + per-platform breakdown, volume trend (rising/steady/new),
+        and key discussion threads. Deterministic lexicon heuristic (no LLM).
 
         PAID: $0.01 USDC per query after the daily free allowance (25/day). On a
         402, pay the returned Solana memo and re-call with the SAME args plus

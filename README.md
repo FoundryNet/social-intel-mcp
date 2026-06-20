@@ -10,8 +10,25 @@ pulse, and brand mentions across Reddit, Hacker News, and Google Trends.
 > **financial-signals-mcp**, **weather-intel-mcp**, **cyber-intel-mcp**,
 > **compliance-mcp**, **academic-intel-mcp**, **fact-check-mcp**, **oss-intel-mcp**.
 
-Live MCP endpoint (Streamable HTTP):
-`https://social-intel-mcp-production.up.railway.app/mcp`
+## Connect
+
+- **MCP endpoint** (Streamable HTTP): `https://social-intel-mcp-production.up.railway.app/mcp`
+- **Registry**: `io.github.FoundryNet/social-intel-mcp`
+- **Agent card**: `https://social-intel-mcp-production.up.railway.app/.well-known/agent-card.json`
+
+### Claude Desktop / Cursor / Claude Code
+
+```bash
+claude mcp add --transport http social-intel https://social-intel-mcp-production.up.railway.app/mcp
+```
+
+Or by config:
+
+```json
+{ "mcpServers": { "social-intel": { "url": "https://social-intel-mcp-production.up.railway.app/mcp" } } }
+```
+
+Smithery: `io.github.FoundryNet/social-intel-mcp`
 
 ## Tools
 
@@ -44,12 +61,9 @@ keyword search for sentiment, brand mentions, and community pulse. Twitter/X pub
 trends are folded in best-effort and degrade gracefully when unavailable. Stored in
 a standalone Supabase project.
 
-## Connect
-
-Smithery: `@foundrynet/social-intel` · MCP registry: `io.github.FoundryNet/social-intel-mcp`
-
-```json
-{ "mcpServers": { "social-intel": { "url": "https://social-intel-mcp-production.up.railway.app/mcp" } } }
-```
-
 Built by [FoundryNet](https://foundrynet.io) · hello@foundrynet.io
+
+## Live network activity
+
+**Live feed:** [mint.foundrynet.io/feed](https://mint.foundrynet.io/feed)  
+Real-time verified work across 13 servers and autonomous agents, anchored on Solana via [MINT Protocol](https://mint.foundrynet.io).

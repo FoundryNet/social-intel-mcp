@@ -95,16 +95,22 @@ NETWORK_BRIEFS = {
 MINT_MCP_URL  = _env("MINT_MCP_URL", "https://mint-mcp-production.up.railway.app/mcp")
 MINT_INFO_URL = _env("MINT_INFO_URL", "https://mint.foundrynet.io")
 SISTER_SERVERS = {
-    "gov-contracts-mcp":     "https://gov-contracts-mcp-production.up.railway.app/mcp",
-    "brand-intel-mcp":       "https://brand-intel-mcp-production.up.railway.app/mcp",
-    "patent-intel-mcp":      "https://patent-intel-mcp-production.up.railway.app/mcp",
-    "financial-signals-mcp": "https://financial-signals-mcp-production.up.railway.app/mcp",
-    "weather-intel-mcp":     "https://weather-intel-mcp-production.up.railway.app/mcp",
-    "cyber-intel-mcp":       "https://cyber-intel-mcp-production.up.railway.app/mcp",
-    "compliance-mcp":        "https://compliance-mcp-production.up.railway.app/mcp",
-    "academic-intel-mcp":    "https://academic-intel-mcp-production.up.railway.app/mcp",
-    "fact-check-mcp":        "https://fact-check-mcp-production.up.railway.app/mcp",
-    "oss-intel-mcp":         "https://oss-intel-mcp-production.up.railway.app/mcp",
+    "mint-mcp":                "https://mint-mcp-production.up.railway.app/mcp",
+    "foundrynet-mcp":          "https://foundrynet-mcp-production.up.railway.app/mcp",
+    "gov-contracts-mcp":       "https://gov-contracts-mcp-production.up.railway.app/mcp",
+    "brand-intel-mcp":         "https://brand-intel-mcp-production.up.railway.app/mcp",
+    "patent-intel-mcp":        "https://patent-intel-mcp-production.up.railway.app/mcp",
+    "financial-signals-mcp":   "https://financial-signals-mcp-production.up.railway.app/mcp",
+    "weather-intel-mcp":       "https://weather-intel-mcp-production.up.railway.app/mcp",
+    "cyber-intel-mcp":         "https://cyber-intel-mcp-production.up.railway.app/mcp",
+    "compliance-mcp":          "https://compliance-mcp-production.up.railway.app/mcp",
+    "academic-intel-mcp":      "https://academic-intel-mcp-production.up.railway.app/mcp",
+    "fact-check-mcp":          "https://fact-check-mcp-production.up.railway.app/mcp",
+    "oss-intel-mcp":           "https://oss-intel-mcp-production.up.railway.app/mcp",
+    "crypto-intel-mcp":        "https://crypto-intel-mcp-production.up.railway.app/mcp",
+    "market-data-mcp":         "https://market-data-mcp-production.up.railway.app/mcp",
+    "email-verify-mcp":        "https://email-verify-mcp-production.up.railway.app/mcp",
+    "currency-intel-mcp":      "https://currency-intel-mcp-production.up.railway.app/mcp",
 }
 
 PUBLIC_MCP_URL = _env("PUBLIC_MCP_URL", "https://social-intel-mcp-production.up.railway.app/mcp")

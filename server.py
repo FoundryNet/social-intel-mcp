@@ -172,12 +172,19 @@ _KEYWORDS = ["social trends", "trending topics", "sentiment analysis", "viral co
              "community pulse", "brand monitoring", "reddit", "hacker news"]
 
 _AGENT_CARD = {
-    "name": "Social Trends Intelligence MCP", "description": _DESC,
-    "url": "https://github.com/FoundryNet/social-intel-mcp",
-    "capabilities": ["social_trends", "trending_topics", "sentiment_analysis",
-                     "viral_content", "community_pulse", "brand_monitoring"],
+    "name": "Social Trends Intelligence MCP",
+    "description": ("Track trending topics, cross-platform sentiment, viral content, and brand "
+                    "mentions — from Reddit, Hacker News, and Google Trends."),
+    "url": "https://social-intel-mcp-production.up.railway.app/mcp",
+    "version": "1.0.0",
+    "capabilities": {"tools": ["trending_topics", "topic_sentiment", "viral_content",
+                               "community_pulse", "brand_mentions", "daily_brief", "mint_info"]},
+    "provider": {"name": "FoundryNet", "url": "https://foundrynet.io"},
     "network": "FoundryNet Data Network",
-    "protocols": {"mcp": {"endpoint": config.PUBLIC_MCP_URL, "transport": "streamable-http", "tools_count": 6},
+    "attestation": {"protocol": "MINT Protocol",
+                    "endpoint": "https://mint-mcp-production.up.railway.app/mcp",
+                    "verified_outputs": True, "live_feed": "https://mint.foundrynet.io/feed", "feed_api": "https://mint-mcp-production.up.railway.app/v1/feed"},
+    "protocols": {"mcp": {"endpoint": config.PUBLIC_MCP_URL, "transport": "streamable-http", "tools_count": 7},
                   "x402": {"supported": True, "currency": "USDC", "network": "solana"}},
     "see_also": config.SISTER_SERVERS, "mint_protocol": config.MINT_MCP_URL,
     "contact": "hello@foundrynet.io",
@@ -234,6 +241,31 @@ async def _agg_loop():
                 await agg.run_aggregation()
         except Exception as e:  # noqa: BLE001
             logger.warning(f"agg loop: {e}")
+
+
+_FREE_TOOL_NAMES = {"mint_info", "macro_dashboard", "cve_detail", "detail",
+                    "domain_age", "convert", "rates", "market_overview", "price",
+                    "quote", "batch_quote", "sector_performance"}
+
+
+@mcp.custom_route("/.well-known/mcp.json", methods=["GET"])
+async def wellknown_mcp_json(request: Request) -> JSONResponse:
+    """Machine-discovery card (emerging standard) for AI clients/crawlers."""
+    live = await _live_tools()
+    names = [t["name"] for t in live]
+    return JSONResponse({
+        "name": _AGENT_CARD["name"],
+        "description": _AGENT_CARD["description"],
+        "url": config.PUBLIC_MCP_URL,
+        "transport": ["streamable-http"],
+        "tools": names,
+        "pricing": {"model": "per-query", "free_tier": True,
+                    "paid_tools": [n for n in names if n not in _FREE_TOOL_NAMES]},
+        "attestation": {"enabled": True, "protocol": "MINT Protocol",
+                        "feed": "https://mint.foundrynet.io/feed"},
+        "network": {"name": "FoundryNet Data Network", "servers": 17,
+                    "homepage": "https://foundrynet.io"},
+    }, headers={"Cache-Control": "public, max-age=300"})
 
 
 def build_dual_app():

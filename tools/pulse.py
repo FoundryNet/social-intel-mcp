@@ -12,9 +12,9 @@ def register(mcp) -> None:
         agent_id: Optional[str] = None,
         payment_tx: Optional[str] = None,
     ) -> dict:
-        """Current pulse of a community — its hot topics, aggregate sentiment, and
-        activity level (high/moderate/low by total engagement). Point it at a
-        subreddit, a Hacker News topic, or both.
+        """Check the pulse of a community on Reddit or Hacker News — its hot topics,
+        aggregate sentiment, and activity level (high/moderate/low by total
+        engagement). Point it at a subreddit, a Hacker News topic, or both.
 
         PAID: $0.01 USDC per query after the daily free allowance (25/day). On a
         402, pay the returned Solana memo and re-call with the SAME args plus

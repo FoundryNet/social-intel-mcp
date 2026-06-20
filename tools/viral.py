@@ -12,9 +12,9 @@ def register(mcp) -> None:
         agent_id: Optional[str] = None,
         payment_tx: Optional[str] = None,
     ) -> dict:
-        """Content gaining traction fastest across platforms — posts and stories
-        ranked by velocity (engagement per hour since posting), the "what's about to
-        blow up?" tool.
+        """Track viral content gaining traction fastest on Reddit and Hacker News —
+        posts and stories ranked by velocity (engagement per hour since posting), the
+        "what's about to blow up?" tool.
 
         PAID: $0.01 USDC per query after the daily free allowance (25/day). On a
         402, pay the returned Solana memo and re-call with the SAME args plus

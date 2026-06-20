@@ -12,9 +12,9 @@ def register(mcp) -> None:
         agent_id: Optional[str] = None,
         payment_tx: Optional[str] = None,
     ) -> dict:
-        """Mentions of a brand/product across platforms with sentiment + context —
-        who's talking about it, where, how they feel, and the threads driving it.
-        Premium.
+        """Track brand mentions across Reddit and Hacker News with sentiment + context —
+        who's talking about a brand or product, where, how they feel, and the threads
+        driving it. Premium.
 
         PAID: $0.02 USDC per query after the daily free allowance (25/day). On a
         402, pay the returned Solana memo and re-call with the SAME args plus

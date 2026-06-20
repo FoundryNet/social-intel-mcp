@@ -2,8 +2,12 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.FoundryNet/social-intel-mcp",
   "title": "Social Trends Intelligence MCP",
-  "description": "Trending topics, cross-platform sentiment, viral content, community pulse & brand mentions.",
+  "description": "Track trending topics, cross-platform sentiment, viral content, and brand mentions — from Reddit, Hacker News, and Google Trends.",
   "version": "1.0.0",
+  "homepage": "https://foundrynet.io",
   "repository": { "url": "https://github.com/FoundryNet/social-intel-mcp", "source": "github" },
+  "categories": ["social", "trends", "data", "sentiment"],
+  "tags": ["trending topics", "social media trends", "Reddit", "Hacker News", "sentiment analysis", "viral content"],
+  "keywords": ["trending topics", "social media trends", "Reddit", "Hacker News", "sentiment analysis", "viral content"],
   "remotes": [ { "type": "streamable-http", "url": "https://social-intel-mcp-production.up.railway.app/mcp" } ]
 }
