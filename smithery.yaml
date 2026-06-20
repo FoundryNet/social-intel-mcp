@@ -1,10 +1,36 @@
-name: "@foundrynet/social-intel"
-displayName: "Social Trends Intelligence MCP"
+name: "@foundrynet/social-intel-mcp"
+displayName: "FoundryNet Social Intelligence"
 description: >-
-  Social trends intelligence for AI agents — trending topics with velocity scores,
-  cross-platform sentiment, fastest-rising viral content, community pulse, and brand
-  mentions across Reddit, Hacker News, and Google Trends. Part of the FoundryNet Data
-  Network. Free tier then x402 (USDC on Solana).
+  Trending topics across Reddit, Hacker News, and Google Trends with velocity scoring, sentiment analysis, and viral content detection.
+icon: "📱"
+homepage: "https://foundrynet.io"
+repository: "https://github.com/FoundryNet/social-intel-mcp"
+license: "MIT"
+categories:
+  - data
+  - social-media
+  - research
+tags:
+  - trending-topics
+  - social-media-trends
+  - reddit
+  - hackernews
+  - sentiment-analysis
+  - viral-content
+keywords:
+  - trending-topics
+  - social-media-trends
+  - reddit
+  - hackernews
+  - sentiment-analysis
+  - viral-content
+attestation:
+  protocol: "MINT Protocol"
+  verified_outputs: true
+  live_feed: "https://mint.foundrynet.io/feed"
+network:
+  name: "FoundryNet Data Network"
+  servers: 17
 startCommand:
   type: http
   url: "https://social-intel-mcp-production.up.railway.app/mcp"
